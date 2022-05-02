@@ -1,3 +1,3 @@
 # Quiz
 
-Angular
+Svelte

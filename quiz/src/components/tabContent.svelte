@@ -1,0 +1,23 @@
+<div class="contentPane">
+    {#if  currentTab === undefined}
+        <p> Tab não selecionado!</p>
+    {:else}
+        <p>{ contents[currentTab] }</p>
+    {/if}
+</div>
+
+<script lang='ts'>
+export let contents: string[] = [];
+export let currentTab: number;
+
+</script>
+
+<style>
+	.contentPane {
+		padding: 20px;
+		margin: 10px 0;
+		border-radius: 10px;
+		border: 1px solid #aaa;
+		background-color: #f0f0f0;
+	}
+</style>
