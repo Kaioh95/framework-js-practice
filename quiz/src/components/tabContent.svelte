@@ -20,4 +20,7 @@ export let currentTab: number;
 		border: 1px solid #aaa;
 		background-color: #f0f0f0;
 	}
+    p{
+        color: black;
+    }
 </style>
