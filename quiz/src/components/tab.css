@@ -1,12 +1,10 @@
 
 .tabPane {
-    width: 360px;
-    height: 400px;
+    padding: 50px;
 }
   
 .tabButtonsCSS button {
-    width: 80px;
-    margin-right: 10px;
+    margin-right: 15px;
     background-color: #ccc;
     border: 1px solid rgb(118, 118, 118);
     border-radius: 3px;
@@ -19,8 +17,6 @@
 }
 
 .tabContentPane {
-    width: 310px;
-    height: 60px;
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;

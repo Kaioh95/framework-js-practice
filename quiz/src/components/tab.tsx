@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import './tab.css'
+import './tab.css';
+import {TabButtons} from './TabButtons';
+import {TabContent} from './TabContent';
 
 const tabButtons = ["tab 1", "tab 2", "tab 3", "tab 4"];
-const tabText = ["primeiro", "segundo", "terceiro", "quarto"];
+const tabText = ["Texto do primeiro tab",
+        "Texto do segundo tab",
+        "Texto do terceiro tab",
+        "Texto do quarto tab"];
 
 export function Tab(){
     const [currentTab, setCurrentTab] = useState<number>();
@@ -13,21 +18,22 @@ export function Tab(){
 
     return(
         <div className='tabPane'>
-            <TabOptions
+            <TabButtons
                 tabsOptions = { tabButtons }
                 onSelection={ select }
                 selection={ currentTab }
             />
 
-            <div className='tabContentPane'>
-                Texto do { currentTab != undefined ? tabText[currentTab] + ' tab' : 'tab não selecionado' }
-            </div>
+            <TabContent
+                contents={ tabText }
+                currentTab={ currentTab }
+            />
         </div>
     );
 }
 
 
-interface tabProps {
+/*interface tabProps {
     tabsOptions: string[]
     onSelection: Function
     selection?: number
@@ -48,4 +54,4 @@ function TabOptions(props: tabProps){
             { buttons }
         </div>
     );
-}
+}*/
