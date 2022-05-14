@@ -17,7 +17,6 @@ export interface ButtonsTab{
     `,
     styles: [`
         button{
-            width: 80px;
             margin-right: 10px;
             padding: 2px 5px;
             border-radius: 3px;
