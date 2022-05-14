@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { ButtonsTab } from "./tabButtons.component";
+import { TabContent } from "./tabContent.component";
 
 @Component({
     selector: 'app-tab',
@@ -13,13 +14,11 @@ import { ButtonsTab } from "./tabButtons.component";
 
             </app-tabButtons>
 
-            <div class="textPane">
-                <p>Texto do 
-                    {{currentTab === undefined
-                        ? "tab nao selecionado" : tabText[currentTab] + ' tab'
-                    }}
-                </p>
-            </div>
+            <app-tabContent
+                [contents]="tabText"
+                [currentTab]="currentTab"
+            >
+            </app-tabContent>
 
         </div>
     `,
@@ -27,20 +26,15 @@ import { ButtonsTab } from "./tabButtons.component";
         .tabPane{
             padding: 50px;
         }
-        .textPane{
-            width: 350px;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            background-color: #f0f0f0;
-        }
     `]
 })
 
 export class TabComponent{
     tabOptions = ["tab 1", "tab 2", "tab 3", "tab 4"];
-    tabText = ["primeiro", "segundo", "terceiro", "quarto"];
+    tabText = ["Texto do primeiro tab",
+            "Texto do segundo tab",
+            "Texto do terceiro tab",
+            "Texto do quarto tab"];
 
     currentTab: number | undefined;
 

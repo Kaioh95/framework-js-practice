@@ -7,6 +7,7 @@ import { QuizComponent } from './components/quiz.component'
 import { ResultsComponent } from './components/results.component'
 import { TabComponent } from './components/tab.component'
 import { TabButtonsComponent } from './components/tabButtons.component'
+import { TabContentComponent } from './components/tabContent.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TabButtonsComponent } from './components/tabButtons.component'
     QuestionComponent,
     ResultsComponent,
     TabComponent,
-    TabButtonsComponent
+    TabButtonsComponent,
+    TabContentComponent
   ],
   imports: [
     BrowserModule
