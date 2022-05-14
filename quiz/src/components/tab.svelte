@@ -26,7 +26,7 @@ const contents = [
 
 let currentTab;
 
-function OnSelection(selectedTab: number){
+function OnSelection(selectedTab){
     currentTab = selectedTab;
 }
 

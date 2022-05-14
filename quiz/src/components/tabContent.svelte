@@ -7,8 +7,8 @@
 </div>
 
 <script lang='ts'>
-export let contents: string[] = [];
-export let currentTab: number;
+export let contents;
+export let currentTab;
 
 </script>
 

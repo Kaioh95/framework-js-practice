@@ -13,12 +13,12 @@
 <script lang="ts">
 import { createEventDispatcher } from "svelte";
 
-export let options: string[] = [];
-export let selection: number;
+export let options;
+export let selection;
 
 const dispatcher = createEventDispatcher();
 
-function clicked(idx: number){
+function clicked(idx){
     console.log('Clicou no botão ', idx);
     dispatcher('selection', idx);
 }
