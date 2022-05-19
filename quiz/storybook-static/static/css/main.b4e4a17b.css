@@ -1,0 +1,27 @@
+
+.tabPane {
+    padding: 50px;
+}
+  
+.tabButtonsCSS button {
+    margin-right: 15px;
+    background-color: #ccc;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+.tabButtonsCSS .selected {
+    font-weight: bold;
+    background-color: #aaa;
+}
+
+.tabContentPane {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    background-color: #f0f0f0;
+}
+
+/*# sourceMappingURL=main.b4e4a17b.css.map*/
