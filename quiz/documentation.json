@@ -37,12 +37,12 @@
         },
         {
             "name": "ButtonsTab",
-            "id": "interface-ButtonsTab-0b28afe92e0ac48a1406bf7be5ce1fd0e22d546104ce9caedf105c239180f70f2ee4e44219e6d767b87050d6bd7759b4e3590dfafcbb33a1ebd25de1b21703cf",
+            "id": "interface-ButtonsTab-32539f9516dd69db365b5c5d07b22f278c5f4c24d90afcb269d8e3f4bb0010a72191a33c73951d1b186e4a94d19d9c27e68564cf61739413024275ff488f49c2",
             "file": "src/app/components/tabButtons.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\n\nexport interface ButtonsTab{\n    tabOptions: string[];\n    selection?: number; \n}\n\n@Component({\n    selector: \"app-tabButtons\",\n    template: `\n        <button *ngFor=\"let tabOption of tabOptions; let i = index\"\n            [ngClass]=\"{selected: i === selection}\"\n            (click)=\"onSelection.emit(i)\"\n        >\n            {{ tabOption }}\n        </button>\n    `,\n    styles: [`\n        button{\n            width: 80px;\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    `]\n})\n\nexport class TabButtonsComponent{\n    @Input() tabOptions!: string[];\n    @Input() selection?: number;\n    @Output() onSelection = new EventEmitter<number>()\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\n\nexport interface ButtonsTab{\n    tabOptions: string[];\n    selection?: number; \n}\n\n@Component({\n    selector: \"app-tabButtons\",\n    template: `\n        <button *ngFor=\"let tabOption of tabOptions; let i = index\"\n            [ngClass]=\"{selected: i === selection}\"\n            (click)=\"onSelection.emit(i)\"\n        >\n            {{ tabOption }}\n        </button>\n    `,\n    styles: [`\n        button{\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    `]\n})\n\nexport class TabButtonsComponent{\n    @Input() tabOptions!: string[];\n    @Input() selection?: number;\n    @Output() onSelection = new EventEmitter<number>()\n}",
             "properties": [
                 {
                     "name": "selection",
@@ -716,7 +716,7 @@
         },
         {
             "name": "TabButtonsComponent",
-            "id": "component-TabButtonsComponent-0b28afe92e0ac48a1406bf7be5ce1fd0e22d546104ce9caedf105c239180f70f2ee4e44219e6d767b87050d6bd7759b4e3590dfafcbb33a1ebd25de1b21703cf",
+            "id": "component-TabButtonsComponent-32539f9516dd69db365b5c5d07b22f278c5f4c24d90afcb269d8e3f4bb0010a72191a33c73951d1b186e4a94d19d9c27e68564cf61739413024275ff488f49c2",
             "file": "src/app/components/tabButtons.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -726,7 +726,7 @@
             "selector": "app-tabButtons",
             "styleUrls": [],
             "styles": [
-                "\n        button{\n            width: 80px;\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    "
+                "\n        button{\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    "
             ],
             "template": "<button *ngFor=\"let tabOption of tabOptions; let i = index\"\n    [ngClass]=\"{selected: i === selection}\"\n    (click)=\"onSelection.emit(i)\"\n>\n    {{ tabOption }}\n</button>\n",
             "templateUrl": [],
@@ -736,7 +736,7 @@
                     "name": "selection",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 37,
+                    "line": 36,
                     "type": "number",
                     "decorators": []
                 },
@@ -744,7 +744,7 @@
                     "name": "tabOptions",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 36,
+                    "line": 35,
                     "type": "string[]",
                     "decorators": []
                 }
@@ -755,7 +755,7 @@
                     "defaultValue": "new EventEmitter<number>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 38,
+                    "line": 37,
                     "type": "EventEmitter"
                 }
             ],
@@ -768,10 +768,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\n\nexport interface ButtonsTab{\n    tabOptions: string[];\n    selection?: number; \n}\n\n@Component({\n    selector: \"app-tabButtons\",\n    template: `\n        <button *ngFor=\"let tabOption of tabOptions; let i = index\"\n            [ngClass]=\"{selected: i === selection}\"\n            (click)=\"onSelection.emit(i)\"\n        >\n            {{ tabOption }}\n        </button>\n    `,\n    styles: [`\n        button{\n            width: 80px;\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    `]\n})\n\nexport class TabButtonsComponent{\n    @Input() tabOptions!: string[];\n    @Input() selection?: number;\n    @Output() onSelection = new EventEmitter<number>()\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\n\nexport interface ButtonsTab{\n    tabOptions: string[];\n    selection?: number; \n}\n\n@Component({\n    selector: \"app-tabButtons\",\n    template: `\n        <button *ngFor=\"let tabOption of tabOptions; let i = index\"\n            [ngClass]=\"{selected: i === selection}\"\n            (click)=\"onSelection.emit(i)\"\n        >\n            {{ tabOption }}\n        </button>\n    `,\n    styles: [`\n        button{\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    `]\n})\n\nexport class TabButtonsComponent{\n    @Input() tabOptions!: string[];\n    @Input() selection?: number;\n    @Output() onSelection = new EventEmitter<number>()\n}",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n        button{\n            width: 80px;\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    \n"
+            "stylesData": "\n        button{\n            margin-right: 10px;\n            padding: 2px 5px;\n            border-radius: 3px;\n            border: 1px solid #ccc;\n            background-color: #aaa;\n        }\n\n        .selected{\n            font-weight: bold;\n            background-color: rgb(118, 118, 118);\n        }\n    \n"
         },
         {
             "name": "TabComponent",
@@ -1112,16 +1112,6 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "TabAllComponents",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/tab.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "TabButtonsComp",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1190,16 +1180,6 @@
                 "deprecationMessage": "",
                 "type": "Story<Page>",
                 "defaultValue": "(args: Page) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/tab.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<TabComponent>",
-                "defaultValue": "() => ({})"
             },
             {
                 "name": "Template",
@@ -1429,28 +1409,6 @@
                     "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/tab.stories.ts": [
-                {
-                    "name": "TabAllComponents",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/tab.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/tab.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<TabComponent>",
-                    "defaultValue": "() => ({})"
-                }
-            ],
             "src/stories/tabContent.stories.ts": [
                 {
                     "name": "TabContentComp",
@@ -1490,7 +1448,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1756,26 +1714,6 @@
                 "name": "PageComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tab.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "TabAllComponents",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tab.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
                 "status": "low"
             },
             {
