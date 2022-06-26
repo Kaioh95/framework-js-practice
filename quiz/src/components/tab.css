@@ -1,25 +1,35 @@
 
 .tabPane {
-    padding: 50px;
+    padding: 20px;
+    box-shadow: 5px 4px 10px #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    width: 450px;
+    float: right;
 }
   
 .tabButtonsCSS button {
     margin-right: 15px;
-    background-color: #ccc;
-    border: 1px solid rgb(118, 118, 118);
-    border-radius: 3px;
+    font-size: 15px;
+    /*background-color: #ccc;*/
+    background-color: white;
+    border: 0px solid rgb(118, 118, 118);
+    border-radius: 0px;
     padding: 2px 5px;
 }
 
 .tabButtonsCSS .selected {
     font-weight: bold;
     background-color: #aaa;
+    border-bottom: 3px solid #2062ed;
+    background-color: white;
 }
 
 .tabContentPane {
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
-    border: 1px solid #aaa;
-    background-color: #f0f0f0;
+    border: 0px solid #aaa;
+    /*background-color: #f0f0f0;*/
+    background-color: white;
 }

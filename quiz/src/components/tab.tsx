@@ -3,13 +3,18 @@ import './tab.css';
 import {TabButtons} from './TabButtons';
 import {TabContent} from './TabContent';
 
-const tabButtons = ["tab 1", "tab 2", "tab 3", "tab 4"];
+export interface TabProps {
+    tabButtons: string[]
+    tabText: string[]
+}
+
+/*const tabButtons = ["tab 1", "tab 2", "tab 3", "tab 4"];
 const tabText = ["Texto do primeiro tab",
         "Texto do segundo tab",
         "Texto do terceiro tab",
-        "Texto do quarto tab"];
+        "Texto do quarto tab"];*/
 
-export function Tab(){
+export function Tab(props: TabProps){
     const [currentTab, setCurrentTab] = useState<number>();
 
     function select(tabIndex: number){
@@ -19,13 +24,13 @@ export function Tab(){
     return(
         <div className='tabPane'>
             <TabButtons
-                tabsOptions = { tabButtons }
+                tabsOptions = { props.tabButtons }
                 onSelection={ select }
                 selection={ currentTab }
             />
 
             <TabContent
-                contents={ tabText }
+                contents={ props.tabText }
                 currentTab={ currentTab }
             />
         </div>

@@ -1,0 +1,75 @@
+.tab-form{
+    width: 600px;
+    box-shadow: 5px 4px 10px #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.qst-comp{
+    margin: 20px;
+}
+.qst-form {
+    --label-size: 150px;
+    --label-margin: 10px;
+    --label-width: calc(var(--label-size) + var(--label-margin));
+    --border-size: 1px;
+    --border-color: #ccc;
+    --border-radius: 4px;
+    --input-padding: 5px;
+    --input-number-size: 30pt;
+    --primary-color: #2062ed;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.qst-form label {
+    width: var(--label-size);
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    margin-right: var(--label-margin);
+    vertical-align: top;
+  }
+
+.qst-form .error {
+    font-style: italic;
+    font-size: 10pt;
+    color: red;
+    margin-left: var(--label-width);
+    height: 20pt;
+}
+
+.qst-form .buttons {
+    margin-top: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.qst-form .buttons input{
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
+    width: fit-content;
+    border: 0;
+}
+
+.qst-form .numTabs {
+    border-bottom: var(--border-size) solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.qst-form input {
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: calc(90% - var(--label-size));
+}
+
+.qst-form .conteudo {
+    height: 60px;
+    margin-bottom: 5pt;
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: calc(90% - var(--label-size));
+}

@@ -8,6 +8,6 @@ export default {
     component: Tab,
 } as ComponentMeta<typeof Tab>;
 
-const Template: ComponentStory<typeof Tab> = () => <Tab/>;
+//const Template: ComponentStory<typeof Tab> = () => <Tab/>;
 
-export const FirstTab = Template.bind({});
+//export const FirstTab = Template.bind({});
