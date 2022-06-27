@@ -1,7 +1,7 @@
 <template>
     <TabForm @on-submit="addQuestion($event)"></TabForm>
     <div class="box" v-for="tab, i in tabStore.tabUp">
-        <button class="erase" @click="deleteTab(i)">X</button>
+        <!--button class="erase" @click="deleteTab(i)">X</button-->
         <Tab
             :tabOptions="tab.tabOptions"
             :tabDisplayText="tab.tabDisplayText"
@@ -30,10 +30,11 @@
 
 <style>
     .box {
-        padding: 10px;
+        /*padding: 10px;
         border: 1px solid #aaf;
         border-radius: 5px;
-        margin: 10px;
+        margin: 10px;*/
+        float: right;
     }
     .erase {
         float: right;

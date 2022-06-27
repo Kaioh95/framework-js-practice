@@ -7,7 +7,7 @@
                 <input type="number" :value="titleOptions.length" @change="changeNumOptions(($event.target as HTMLInputElement).value)"/>
                 <div class="error">{{ errors.numOptions }}</div>
 
-                <div v-for="(opt, i) in options" :key="`options_${i}`">
+                <div v-for="(opt, i) in titleOptions" :key="`options_${i}`">
                     <div>
                         <label>Título</label>
                         <input class="titulo" type="text" :value="titleOptions[i]"
@@ -126,39 +126,76 @@
 </script>
 
 <style scoped>
-    .tabPane {
-        padding: 20px;
+    .tb-container-form{
+        width: 600px;
         box-shadow: 5px 4px 10px #ccc;
         border-radius: 5px;
         margin: 20px;
-        width: 450px;
-        float: right;
-    }
-    
-    .tabButtonsCSS button {
-        margin-right: 15px;
-        font-size: 15px;
-        /*background-color: #ccc;*/
-        background-color: white;
-        border: 0px solid rgb(118, 118, 118);
-        border-radius: 0px;
-        padding: 2px 5px;
+        display: inline-block;
     }
 
-    .tabButtonsCSS .selected {
-        font-weight: bold;
-        background-color: #aaa;
-        border-bottom: 3px solid #2062ed;
-        background-color: white;
-    }
-
-    .tabContentPane {
+    .tb-form {
+        --label-size: 150px;
+        --label-margin: 10px;
+        --label-width: calc(var(--label-size) + var(--label-margin));
+        --border-size: 1px;
+        --border-color: #ccc;
+        --border-radius: 4px;
+        --input-padding: 5px;
+        --input-number-size: 30pt;
+        --primary-color: #2062ed;
         padding: 20px;
-        margin: 10px 0;
-        border-radius: 10px;
-        border: 0px solid #aaa;
-        /*background-color: #f0f0f0;*/
-        background-color: white;
-        overflow: auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .tb-form label {
+        width: var(--label-size);
+        display: inline-block;
+        text-align: right;
+        font-weight: bold;
+        margin-right: var(--label-margin);
+        vertical-align: top;
+    }
+
+    .tb-form .error {
+        font-style: italic;
+        font-size: 10pt;
+        color: red;
+        margin-left: var(--label-width);
+        height: 20pt;
+    }
+
+    .tb-form .buttons {
+        margin-top: 10px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .tb-form .buttons input{
+        color: white;
+        background-color: var(--primary-color);
+        padding: 10px;
+        width: fit-content;
+        border: 0;
+    }
+
+    .tb-form .numTabs {
+        border-bottom: var(--border-size) solid var(--border-color);
+        margin-bottom: 20px;
+    }
+
+    .tb-form input {
+        border: var(--border-size) solid var(--border-color);
+        border-radius: var(--border-radius);
+        width: calc(90% - var(--label-size));
+    }
+
+    .tb-form .conteudo {
+        height: 60px;
+        margin-bottom: 5pt;
+        border: var(--border-size) solid var(--border-color);
+        border-radius: var(--border-radius);
+        width: calc(90% - var(--label-size));
     }
 </style>

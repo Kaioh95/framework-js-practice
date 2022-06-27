@@ -19,7 +19,7 @@ export const tabStore = reactive<TabStore>({
         const newTab = {...tbUp}
         newTab.tabOptions = {...tbUp.tabOptions}
         newTab.tabDisplayText = {...tbUp.tabDisplayText}
-        this.tabUp.push(newTab)
+        this.tabUp[0] = newTab
     },
 
     update(index: number, tbUp: TabType){

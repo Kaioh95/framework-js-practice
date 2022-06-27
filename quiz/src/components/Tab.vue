@@ -39,8 +39,13 @@
 
 <style>
 
-.tabPane{
-    padding: 50px;
-}
+    .tabPane {
+        padding: 20px;
+        box-shadow: 5px 4px 10px #ccc;
+        border-radius: 5px;
+        margin: 20px;
+        width: 450px;
+        float: right;
+    }
 
 </style>
