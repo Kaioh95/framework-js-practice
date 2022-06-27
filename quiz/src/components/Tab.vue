@@ -17,11 +17,16 @@
     import TabButtons, { type TabButtonsProps} from "./TabButtons.vue"
     import TabContent, { type TabContentProps} from "./TabContent.vue";
 
-    const tabOptions = ["tab 1", "tab 2", "tab 3", "tab 4"];
+    export interface TabProps{
+        tabOptions: string[]
+        tabDisplayText: string[]
+    }
+
+    /*const tabOptions = ["tab 1", "tab 2", "tab 3", "tab 4"];
     const tabDisplayText = ["Texto do primeiro tab",
             "Texto do segundo tab",
             "Texto do terceiro tab",
-            "Texto do quarto tab"];
+            "Texto do quarto tab"];*/
 
     const currentTab = ref<number>();
 
@@ -29,6 +34,7 @@
         currentTab.value = tabIndex;
     }
 
+    defineProps<TabProps>()
 </script>
 
 <style>
