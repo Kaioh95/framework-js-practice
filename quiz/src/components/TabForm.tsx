@@ -71,11 +71,11 @@ export function TabForm({ onSubmit }: TabFormProps) {
         e.preventDefault()
 
         const titleOptionsOk = titleOptions
-            .map((opt, i) => check(opt, required, `title_options_${i}`))
+            .map((opt, i) => check(opt, required, `title_option_${i}`))
             .every(o => o)
 
-        const contentOptionsOk = titleOptions
-            .map((opt, i) => check(opt, required, `content_options_${i}`))
+        const contentOptionsOk = contentOptions
+            .map((opt, i) => check(opt, required, `content_option_${i}`))
             .every(o => o)
 
         if(titleOptionsOk && contentOptionsOk){
@@ -97,16 +97,16 @@ export function TabForm({ onSubmit }: TabFormProps) {
                 <label>Título</label>
                 <input className="titulo" type="text" value={titleOptions[i]}
                     onChange={e => titleChangeOption(i, e.target.value)}
-                    onBlur={e => touched[`title_option_${i}`] && check(e.target.value, required, `title_options_${i}`)}
+                    onBlur={e => touched[`title_option_${i}`] && check(e.target.value, required, `title_option_${i}`)}
                 />
                 <div className="error">{ erros[`title_option_${i}`] }</div>
             </div>
 
             <div>
                 <label>Conteúdo</label>
-                <input className="conteudo" type="textarea" value={contentOptions[i]}
+                <textarea className="conteudo" value={contentOptions[i]}
                     onChange={e => contentChangeOption(i, e.target.value)}
-                    onBlur={e => touched[`content_option_${i}`] && check(e.target.value, required, `content_options_${i}`)}
+                    onBlur={e => touched[`content_option_${i}`] && check(e.target.value, required, `content_option_${i}`)}
                 />
                 <div className="error">{ erros[`content_option_${i}`] }</div>
             </div>
