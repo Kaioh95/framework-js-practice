@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser'
 
 import { AppComponent } from './app.component'
@@ -9,6 +10,7 @@ import { TabComponent } from './components/tab.component'
 import { TabButtonsComponent } from './components/tabButtons.component'
 import { TabContentComponent } from './components/tabContent.component'
 import { TabFormComponent } from './components/tab-form/tabForm.component'
+import { TabPageComponent } from './components/tabPage.component'
 
 @NgModule({
   declarations: [
@@ -20,9 +22,11 @@ import { TabFormComponent } from './components/tab-form/tabForm.component'
     TabButtonsComponent,
     TabContentComponent,
     TabFormComponent,
+    TabPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

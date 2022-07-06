@@ -24,7 +24,7 @@ import { TabContent } from "./tabContent.component";
     `,
     styles: [`
         .tabPane{
-            padding: 50px;
+            padding: 5px;
         }
     `]
 })

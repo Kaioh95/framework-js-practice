@@ -16,17 +16,21 @@ export interface ButtonsTab{
         </button>
     `,
     styles: [`
-        button{
-            margin-right: 10px;
+        button {
+            margin-right: 15px;
+            font-size: 15px;
+            /*background-color: #ccc;*/
+            background-color: white;
+            border: 0px solid rgb(118, 118, 118);
+            border-radius: 0px;
             padding: 2px 5px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-            background-color: #aaa;
         }
 
-        .selected{
+        .selected {
             font-weight: bold;
-            background-color: rgb(118, 118, 118);
+            background-color: #aaa;
+            border-bottom: 3px solid #2062ed;
+            background-color: white;
         }
     `]
 })
