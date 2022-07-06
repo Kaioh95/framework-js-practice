@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input, Output } from "@angular/core";
 import { ButtonsTab } from "./tabButtons.component";
 import { TabContent } from "./tabContent.component";
 
@@ -30,11 +30,13 @@ import { TabContent } from "./tabContent.component";
 })
 
 export class TabComponent{
-    tabOptions = ["tab 1", "tab 2", "tab 3", "tab 4"];
+    @Input() tabOptions!: string[]
+    @Input() tabText!: string[]
+    /*tabOptions = ["tab 1", "tab 2", "tab 3", "tab 4"];
     tabText = ["Texto do primeiro tab",
             "Texto do segundo tab",
             "Texto do terceiro tab",
-            "Texto do quarto tab"];
+            "Texto do quarto tab"];*/
 
     currentTab: number | undefined;
 

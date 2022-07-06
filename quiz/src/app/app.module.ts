@@ -8,6 +8,7 @@ import { ResultsComponent } from './components/results.component'
 import { TabComponent } from './components/tab.component'
 import { TabButtonsComponent } from './components/tabButtons.component'
 import { TabContentComponent } from './components/tabContent.component'
+import { TabFormComponent } from './components/tab-form/tabForm.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TabContentComponent } from './components/tabContent.component'
     ResultsComponent,
     TabComponent,
     TabButtonsComponent,
-    TabContentComponent
+    TabContentComponent,
+    TabFormComponent,
   ],
   imports: [
     BrowserModule
