@@ -16,13 +16,16 @@
 import TabOptions from './tabOptions.svelte'
 import TabContent from './tabContent.svelte'
 
-const options = ['tab 1', 'tab 2', 'tab 3', 'tab 4']
+export let options;
+export let contents;
+
+/*const options = ['tab 1', 'tab 2', 'tab 3', 'tab 4']
 const contents = [
     'Texto do primeiro tab',
     'Texto do segundo tab',
     'Texto do terceiro tab',
     'Texto do quarto tab'
-]
+]*/
 
 let currentTab;
 
@@ -34,7 +37,7 @@ function OnSelection(selectedTab){
 
 <style>
     .tabPane{
-        padding: 50px;
+        padding: 5px;
     }
 
 </style>

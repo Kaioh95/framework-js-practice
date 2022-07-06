@@ -15,10 +15,12 @@ export let currentTab;
 <style>
 	.contentPane {
 		padding: 20px;
-		margin: 10px 0;
-		border-radius: 10px;
-		border: 1px solid #aaa;
-		background-color: #f0f0f0;
+        margin: 10px 0;
+        border-radius: 10px;
+        border: 0px solid #aaa;
+        /*background-color: #f0f0f0;*/
+        background-color: white;
+        overflow: auto;
 	}
     p{
         color: black;

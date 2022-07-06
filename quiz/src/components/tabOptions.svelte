@@ -26,17 +26,21 @@ function clicked(idx){
 </script>
 
 <style>
-    button{
+    button {
         margin-right: 15px;
-        background-color: #ccc;
-        border: 1px solid rgb(118, 188, 188);
-        border-radius: 3px;
+        font-size: 15px;
+        /*background-color: #ccc;*/
+        background-color: white;
+        border: 0px solid rgb(118, 118, 118);
+        border-radius: 0px;
         padding: 2px 5px;
     }
 
     .selected {
         font-weight: bold;
         background-color: #aaa;
+        border-bottom: 3px solid #2062ed;
+        background-color: white;
     }
 
 </style>
